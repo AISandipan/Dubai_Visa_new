@@ -29,6 +29,34 @@ Discounted_Price =
     )
 
 
+
+1)
+Create a Table mytable
+add the following
+Region	Color
+Central	#FF003A
+East	#00FF00
+South	#FF8900
+West	#00CDFF
+
+2)
+Make Relationship with Region with Orders[Region]
+
+
+
+Orders_Color1 = 
+
+SWITCH(TRUE(),
+SUM(Orders[Sales])<= 400000,"#ff0000",
+SUM(Orders[Sales])<= 690000,"#0000FF",
+"#FFA500"
+)
+
+
+
+
+
+
 Profit_Trend_Icon2 = 
 SWITCH(
     TRUE(),
